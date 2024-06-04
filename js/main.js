@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() >= firstSection.height()) {
+        if ($(this).scrollTop() >= firstSection.height() - 20) {
             // Animation for sticky header intro 
             stickyHeader.slideDown('2').removeClass('hidden');
         } else {
