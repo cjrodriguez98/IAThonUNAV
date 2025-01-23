@@ -158,6 +158,40 @@
             margin: 0;
             font-size: 1rem;
         }
+        body.table_elem {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table.table_elem {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th.table_elem, td.table_elem {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th.table_elem {
+            background-color: #f4f4f4;
+        }
+        caption.table_elem {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .event-row {
+            display: flex; /* Ensures items in the row are aligned horizontally */
+            flex-direction: column; /* Switch to vertical stacking for smaller screens if needed */
+            align-items: center; /* Centers the content horizontally */
+            justify-content: center; /* Centers the content vertically */
+            background-color: #f9f9f9; /* Light background color for contrast */
+            padding: 20px; /* Space inside the row */
+            margin: 20px 0; /* Adds space above and below the row */
+            border: 1px solid #ddd; /* Optional border for separation */
+            border-radius: 8px; /* Optional rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            text-align: center; /* Centers the text */
+        }
     </style>
 </head>
 <body>
@@ -165,27 +199,114 @@
     <nav class="navbar">
         <a href="#event">Event</a>
         <a href="#teams">Teams</a>
-        <a href="#organizers">Speakers</a>
+        <a href="#organizers">Experts</a>
         <a href="#resources">Resources</a>
     </nav>
 
     <!-- Header -->
     <header class="header">
         <!--Insert logo png-->
-        <img src="./assets/logo.png" alt="Logo">
+        <img src="./assets/logo.png" alt="Logo", width="400rem">
     </header>
 
     <!-- Sections -->
     <section id="event">
-        <div class="event-column event-timer">
-            <h3>IATHON begins in:</h3>
-            <p id="timer">00d 00h 00m 00s</p>
+        <div class="row">
         </div>
-        <div class="event-column event-details">
-            <img src="./assets/auditorio.jpg" alt="Event Location">
-            <p>Location: San Bartolome Gaina K., 16, 20009 Donostia, Gipuzkoa</p>
-            <p>Date: From the 27th of January to the 28th of January, 2025</p>
-            <p><b> Food will be provided </b></p>
+            <div class="event-column event-timer">
+                <h3>IATHON begins in:</h3>
+                <p id="timer">00d 00h 00m 00s</p>
+            </div>
+            <div class="event-column event-details">
+                <img src="./assets/auditorio.jpg" alt="Event Location">
+                <p>Location: San Bartolome Gaina K., 16, 20009 Donostia, Gipuzkoa</p>
+                <p>Date: From the 27th of January to the 28th of January, 2025</p>
+                <p><b> Food will be provided </b></p>
+            </div>
+        <!-- New Row -->
+        <div class="row" style="padding-left: 50px;">
+            <h3>Join the Conversation:</h3>
+            <p>Follow us on social media for live updates </p>
+            <p>and discussions during the event. Use the hashtag <b>#IATHON2025</b>.</p>
+        </div>
+
+        <div class="event-row">    
+            <body class="table_elem">
+                <table class="table_elem">
+                    <caption class="table_elem">Agenda</caption>
+                    <thead>
+                        <tr>
+                            <th class="table_elem">Día</th>
+                            <th class="table_elem">Hora</th>
+                            <th class="table_elem">Actividad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table_elem">Día Cero: Preparación</td>
+                            <td class="table_elem"></td>
+                            <td class="table_elem">Estudiar el material</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem" rowspan="6">27 de enero: Learn & Connect</td>
+                            <td class="table_elem">15:00 - 15:15</td>
+                            <td class="table_elem">Acreditación</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">15:15 - 15:30</td>
+                            <td class="table_elem">Apertura</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">15:30 - 15:45</td>
+                            <td class="table_elem">Explicación del reto</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">15:45 - 16:15</td>
+                            <td class="table_elem">Tech Talks (seminarios)</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">16:15 - 18:00</td>
+                            <td class="table_elem">Tiempo de trabajo</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">18:00 - 18:15</td>
+                            <td class="table_elem">Merienda</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem" rowspan="8">28 de enero: Create & Execute</td>
+                            <td class="table_elem">09:30 - 11:30</td>
+                            <td class="table_elem">Tiempo de trabajo</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">11:30 - 11:45</td>
+                            <td class="table_elem">Café</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">11:45 - 14:00</td>
+                            <td class="table_elem">Tiempo de trabajo</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">14:00 - 15:00</td>
+                            <td class="table_elem">Comida</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">15:00 - 17:00</td>
+                            <td class="table_elem">Tiempo de trabajo</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">17:00 - 18:00</td>
+                            <td class="table_elem">Entrega de set de datos de prueba y tiempo de trabajo final</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">18:00 - 18:15</td>
+                            <td class="table_elem">Merienda</td>
+                        </tr>
+                        <tr>
+                            <td class="table_elem">18:15 - 19:30</td>
+                            <td class="table_elem">Presentaciones de proyectos y cierre</td>
+                        </tr>
+                    </tbody>
+                </table>
         </div>
     </section>
 
@@ -236,19 +357,20 @@
                 <p>Carlos Martínez de la Fuente</p>
                 <p>Lucía Morente Navas</p>
                 <p>Macarena Cuen Perez</p>
+                <p>Nicolás Ros</p>
 
             </div>
         </div>
     </section>
 
     <section id="organizers">
-        <h2>Speakers</h2>
-        <p>Details about the speakers will be updated when finalized.</p>
+        <h2>Experts</h2>
+        <p>Details about the Experts will be updated when finalized.</p>
     </section>
 
     <section id="resources">
         <h2>Resources</h2>
-        <p>Proficency in Python or R is mandatory</p>
+        <p>Proficency in Python or R will be very helpful</p>
         <p>Here are some resources to help you prepare for the event:</p>
         <a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"> Prompt engineering </a>
         <a href="https://dash.plotly.com/ "> Building a GUI in Python</a>
